@@ -1,9 +1,9 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Pocket Toolbox — tool contract
 
-## This is NOT the Next.js you know
+A gallery of small, independent tool widgets. Each tool is one task, tracked in `tasks/<slug>.md`.
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
+- **One component per file:** `src/components/tools/<slug>.tsx`, default export.
+- **Wrap the body in the shared card:** `ToolCard` from `src/components/tool-card.tsx`.
+- **`"use client"` only if the tool is interactive** (state, effects, event handlers). App Router renders Server Components by default.
+- **A task = `src/components/tools/<slug>.tsx` + `tasks/<slug>.md`.** Touch nothing else: never edit `src/app/page.tsx`, `tool-card.tsx`, or any other shared file.
+- **When the tool works, change line 1 of `tasks/<slug>.md` to `status: done`.** Only your own task file, never another worker's.
