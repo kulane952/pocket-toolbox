@@ -1,10 +1,33 @@
 import type { ComponentType } from "react";
 import TipCalculator from "@/components/tools/tip-calculator";
 import Stopwatch from "@/components/tools/stopwatch";
+import AgeCalculator from "@/components/tools/age-calculator";
+import BmiCalculator from "@/components/tools/bmi-calculator";
+import CaseConverter from "@/components/tools/case-converter";
+import ColorConverter from "@/components/tools/color-converter";
+import DiceRoller from "@/components/tools/dice-roller";
+import PasswordGenerator from "@/components/tools/password-generator";
+import PercentageCalculator from "@/components/tools/percentage-calculator";
+import TemperatureConverter from "@/components/tools/temperature-converter";
+import UnitConverter from "@/components/tools/unit-converter";
+import WordCounter from "@/components/tools/word-counter";
 
 // Finished tools are added here by the integrator, never by tool workers
 // (see CLAUDE.md). Each entry is a default export from src/components/tools/.
-const tools: ComponentType[] = [TipCalculator, Stopwatch];
+const tools: ComponentType[] = [
+  TipCalculator,
+  Stopwatch,
+  AgeCalculator,
+  BmiCalculator,
+  CaseConverter,
+  ColorConverter,
+  DiceRoller,
+  PasswordGenerator,
+  PercentageCalculator,
+  TemperatureConverter,
+  UnitConverter,
+  WordCounter,
+];
 
 export default function Home() {
   return (
